@@ -1,0 +1,5 @@
+Starting admin setup...
+Created user id=12
+VERIFIED: id=12, email=admin@dev.localhost.com, role=Admin, status=Active
+SUCCESS: Admin is ready!
+Login with: admin@dev.localhost.com / DevAdmin123!

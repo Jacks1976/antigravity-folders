@@ -4,7 +4,7 @@ FastAPI main application entry point.
 from fastapi import FastAPI
 from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
-from app.routers import auth, members, events, announcements, worship_files, worship_repertoire, worship_schedule
+from app.routers import auth, members, events, announcements, worship_files, worship_repertoire, worship_schedule, rsvp
 import os
 import sys
 
@@ -40,6 +40,7 @@ app.include_router(announcements.router)
 app.include_router(worship_files.router)
 app.include_router(worship_repertoire.router)
 app.include_router(worship_schedule.router)
+app.include_router(rsvp.router)  # <--- NOVO ROUTER DE RSVP
 
 @app.get("/")
 async def root():

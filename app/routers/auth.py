@@ -12,6 +12,7 @@ router = APIRouter(prefix="/auth", tags=["auth"])
 @router.post("/register")
 async def register(req: RegisterRequest, response: Response):
     """Register a new user."""
+    print(f"📢 Router: register chamado para {req.email}")  # <-- PRINT AQUI DENTRO
     result = auth_service.register_user(req.email, req.password, req.full_name, getattr(req, 'organization_slug', None))
     response.status_code = 200
     return result
